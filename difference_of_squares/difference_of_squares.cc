@@ -1,35 +1,23 @@
 #include <iostream>
-#include <string>
-#include <vector>
 using namespace std;
+ int main()
+{
+ float i,suma,suma2,n;
+ suma2=0;
+ suma=0;
+ i=1;
+ cout<<"determine el numero natural N: "; cin>>n ;
+ for (i=1; i<=n ;i++)
+ {
+   suma=suma+(i*i);
+ }
+ for (i=1; i<=n ;i++)
+ {
+   suma2=suma2+i;
+ }
  
-int Posicion(int primo){
-    vector<int> vector_primo;
-    int contador{1};
-    while(vector_primo.size() < primo){
-            int repeticiones = contador/2 + 1;
-            if(contador == 1){
-                vector_primo.emplace_back(contador);
-                contador++;
-                continue;
-            }
-            for(int i = 2; i <= repeticiones + 1; i++){
-                if(contador % i == 0){
-                    break;
-                }
-                if(contador/2 + 1 == i){
-                    vector_primo.emplace_back(contador);
-                }
-            }
-            contador++;
-        }
-    return vector_primo.back();
-}
+   cout<<"=  "<< suma2*suma2-suma;
 
-int main() {
-    cout << "Introduzca la posisición: " << endl;
-    int n;
-    cin >> n;
-    cout << Posicion (n);
-    cout<<endl;
+ 
+  return 0;
 }
